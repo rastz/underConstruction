@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin-ext');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wrapper {
+	position: relative;
+	height: 100vh;
+
+	.foto {
+		width: 100vw;
+		padding-top: 50px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 55%;
+		}
+	}
+
+	p.text {
+		padding: 10px 0;
+		font-size: 30px;
+		text-decoration: overline;
+		text-align: center;
+		color: #333333;
+		text-transform: uppercase;
+	}
+
+	p.date {
+		position: absolute;
+		top: 15px;
+		right: 0;
+		margin: 10px 0 10px;
+		padding: 2px 7px 2px 7px;
+		text-decoration: none;
+		font-size: 18px;
+		color: #fff;
+		background-color: #333;
+		border: 2px solid black;
+		border-right: none;
+		border-radius: 5px 0  0 5px;
+	}
+
+	//  @media - portrait
+	@media screen and (max-width: 768px) {
+
+		.foto img {
+			width: 80%;
+		}
+	}
+
+	@media screen and (max-width: 375px) {
+		.foto img {
+			width: 70%;
+		}
+
+		p.text {
+			font-size: 20px;
+		}
+
+		p.date {
+			font-size: 10px;
+		}
+	}
+
+	@media screen and (max-width: 414px) {
+		p.text {
+			font-size: 18px;
+		}
+
+		p.date {
+			font-size: 10px;
+		}
+	}
+
+	// @media - landscape
+
+	@media screen and (max-width: 1024px) and (orientation: landscape) {
+		.foto {
+			padding-top: 10%;
+		}
+	}
+
+	@media screen and (max-width: 823px) and (orientation: landscape) {
+		.foto {
+			padding-top: 0;
+		}
+
+		p.text {
+			font-size: 25px;
+		}
+
+		p.date {
+			font-size: 12px;
+		}
+	}
+
+	@media screen and (max-width: 812px) and (orientation: landscape) {
+		.foto {
+			padding-top: 5%;
+
+			img {
+				width: 40%;
+			}
+		}
+		p.text {
+			font-size: 20px;
+		}
+
+		p.date {
+			font-size: 10px;
+		}
+	}
+
+	@media screen and (max-width: 640px) and (orientation: landscape) {
+		.foto img {
+			width: 55%;
+		}
+		p.text {
+			font-size: 20px;
+		}
+
+		p.date {
+			font-size: 10px;
+		}
+	}
+
+	@media screen and (max-width: 568px) and (orientation: landscape) {
+		.foto img {
+			width: 55%;
+		}
+		p.text {
+			font-size: 17px;
+		}
+
+		p.date {
+			font-size: 10px;
+		}
+	}
+}
