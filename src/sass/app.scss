@@ -1,145 +1,130 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans+Condensed:300,700');
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Lato', sans-serif;
+
+  &::selection {
+    color: #fff;
+    background-color: #fd3968;
+    background-image: linear-gradient(to right, #d33562 0%, #fd3968 100%);
+  }
 }
 
 .wrapper {
-	position: relative;
-	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100vh;
 
-	.foto {
-		width: 100vw;
-		padding-top: 50px;
+  .quoteText {
+    text-align: center;
+    line-height: 0.3rem;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+  }
 
-		img {
-			display: block;
-			margin: 0 auto;
-			width: 55%;
-		}
-	}
+  .soon {
+    color: #8e8e8e;
+    font-size: 16px;
+    margin: 100px 0 5px 0;
+  }
 
-	p.text {
-		padding: 10px 0;
-		font-size: 30px;
-		text-decoration: overline;
-		text-align: center;
-		color: #333333;
-		text-transform: uppercase;
-	}
+  .icons a {
+      text-decoration: none;
+      color: #8e8e8e;
+      font-size: 14px;
+      transition: all .2s ease-in-out;
+      padding: 0 2px;
 
-	p.date {
-		position: absolute;
-		top: 15px;
-		right: 0;
-		margin: 10px 0 10px;
-		padding: 2px 7px 2px 7px;
-		text-decoration: none;
-		font-size: 18px;
-		color: #fff;
-		background-color: #333;
-		border: 2px solid black;
-		border-right: none;
-		border-radius: 5px 0  0 5px;
-	}
+    &:hover {
+      color: #d33562;
+    }
+  }
 
-	//  @media - portrait
-	@media screen and (max-width: 768px) {
+  p.text {
+    padding: 10px 0;
+    font-weight: lighter;
+    font-size: 45px;
+    text-align: center;
+    color: #d33562;
+    text-transform: lowercase;
+    letter-spacing: 4px;
 
-		.foto img {
-			width: 80%;
-		}
-	}
+    span {
+      color: #fff;
+      background-color: #fff2ac;
+      background-image: linear-gradient(to right, #d33562 0%, #fd3968 100%);
+    }
+  }
 
-	@media screen and (max-width: 375px) {
-		.foto img {
-			width: 70%;
-		}
+  p.date {
+    font-size: 16px;
+    color: #8e8e8e;
+  }
 
-		p.text {
-			font-size: 20px;
-		}
+  //  @media - portrait
+  @media screen and (max-width: 768px) {
 
-		p.date {
-			font-size: 10px;
-		}
-	}
 
-	@media screen and (max-width: 414px) {
-		p.text {
-			font-size: 18px;
-		}
+  }
 
-		p.date {
-			font-size: 10px;
-		}
-	}
+  @media screen and (max-width: 414px) {
+    p.text {
+      font-size: 36px;
+    }
 
-	// @media - landscape
+    p.date {
+      font-size: 10px;
+    }
+  }
 
-	@media screen and (max-width: 1024px) and (orientation: landscape) {
-		.foto {
-			padding-top: 10%;
-		}
-	}
+  @media screen and (max-width: 375px) {
 
-	@media screen and (max-width: 823px) and (orientation: landscape) {
-		.foto {
-			padding-top: 0;
-		}
+    p.text {
+      font-size: 30px;
+    }
+  }
 
-		p.text {
-			font-size: 25px;
-		}
 
-		p.date {
-			font-size: 12px;
-		}
-	}
+  // @media - landscape
 
-	@media screen and (max-width: 812px) and (orientation: landscape) {
-		.foto {
-			padding-top: 5%;
+  @media screen and (max-width: 823px) and (orientation: landscape) {
 
-			img {
-				width: 40%;
-			}
-		}
-		p.text {
-			font-size: 20px;
-		}
+    p.text {
+      font-size: 36px;
+    }
 
-		p.date {
-			font-size: 10px;
-		}
-	}
+    p.date {
+      font-size: 12px;
+    }
+  }
 
-	@media screen and (max-width: 640px) and (orientation: landscape) {
-		.foto img {
-			width: 55%;
-		}
-		p.text {
-			font-size: 20px;
-		}
+  @media screen and (max-width: 812px) and (orientation: landscape) {
 
-		p.date {
-			font-size: 10px;
-		}
-	}
+    p.text {
+      font-size: 32px;
+    }
+  }
 
-	@media screen and (max-width: 568px) and (orientation: landscape) {
-		.foto img {
-			width: 55%;
-		}
-		p.text {
-			font-size: 17px;
-		}
+  @media screen and (max-width: 640px) and (orientation: landscape) {
 
-		p.date {
-			font-size: 10px;
-		}
-	}
+    p.text {
+      font-size: 30px;
+    }
+  }
+
+  @media screen and (max-width: 568px) and (orientation: landscape) {
+
+    p.text {
+      font-size: 28px;
+    }
+  }
 }
